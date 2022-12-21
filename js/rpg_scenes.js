@@ -482,7 +482,7 @@ Scene_Title.prototype.createForeground = function() {
 
 Scene_Title.prototype.drawGameTitle = function() {
     var x = 20;
-    var y = Graphics.height / 4;
+    var y = Graphics.height / 3;
     var maxWidth = Graphics.width - x * 2;
     var text = $dataSystem.gameTitle;
     this._gameTitleSprite.bitmap.outlineColor = 'black';
@@ -500,7 +500,7 @@ Scene_Title.prototype.centerSprite = function(sprite) {
 
 Scene_Title.prototype.createCommandWindow = function() {
     this._commandWindow = new Window_TitleCommand();
-    this._commandWindow.y = 300;
+    this._commandWindow.y = 800;
     this._commandWindow.setHandler('newGame',  this.commandNewGame.bind(this));
     this._commandWindow.setHandler('continue', this.commandContinue.bind(this));
     this._commandWindow.setHandler('options',  this.commandOptions.bind(this));
